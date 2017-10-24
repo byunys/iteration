@@ -5,7 +5,7 @@
 
 # [1, 5, 7 , 8, 4, 3]
 
-#test for git pull
+#test to see if I know how to commit
 
 def iterate(list):
 	# standard for loop with range
