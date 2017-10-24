@@ -3,7 +3,7 @@
 
 # iteration pattern
 
-# [1, 5, 7 ,8 , 4, 3]
+# [1, 5, 7 , 8, 4, 3]
 
 #test for git pull
 
