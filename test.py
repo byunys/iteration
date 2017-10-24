@@ -1,4 +1,4 @@
-from iteration import *
+from iteration import * # * = everything
 
 scores = [100, 90, 85, 100, 0]
 

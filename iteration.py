@@ -9,12 +9,14 @@
 
 def iterate(list):
 	# standard for loop with range
-	# for i in range(0, len(list)):
-	# 	print list[i]
+	for i in range(0, len(list)):
+	 	print list[i] #print the list at spot i
+	 	# i = spot
 
 	# for each loop
 	for item in list:
 		print item
+		# item = value
 
 def print_scores(names, scores):
 	for i in range(0, len(names)):
@@ -26,3 +28,5 @@ def congratulations(names, scores):
 	for i in range(0, len(names)):
 		if (scores[i] == 100):
 			print "Congrats", names[i], "! You got a perfect score!"
+
+
