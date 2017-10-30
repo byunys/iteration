@@ -7,6 +7,7 @@
 
 #test to see if I know how to commit
 # Make a new change
+import math
 
 def iterate(list):
 	# standard for loop with range
@@ -37,20 +38,23 @@ def sum(scores):
 
 	return total			
 
-def min(scores):
-	current_min = scores[0]
-	for n in scores:
-		if n < current_min:
-			current_min = n
-	return current_min
-
-
 def find_average(scores):
-	average = sum(scores)
-	for i in range(0, len(list)):
-		print average/i
+	average = sum(scores)/len(scores)
+	print "The average is ", average
+	return average
 
 def find_filtered_average(scores):
-	average = sum(scores) - (current_min + current_min)
-	for i in range(0, len(list)):
-		print average/i
+	current_min1 = scores[0]
+	for n in scores:
+		if n < current_min1:
+			current_min1 = n
+	
+	if scores[0] != current_min1:
+		current_min2 = scores[0]
+		for n in scores:
+			if n > current_min1 and n < current_min2:
+				current_min2 = n
+
+	filtered_average = (sum(scores) - current_min1 - current_min2)/(len(scores)-2)
+	print "The filtered average is ", filtered_average
+	return filtered_average

@@ -13,3 +13,5 @@ print_scores(names, scores)
 congratulations(names, scores)
 
 find_average(scores)
+
+find_filtered_average(scores)
