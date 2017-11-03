@@ -42,5 +42,14 @@ def find_any_year_car_models():
 	print car_models_years
 	return car_models_years
 
+def find_toyotas_since_2000():
+	total = 0
+	for i in range(0, len(car_makes)):
+		if float(car_years[i]) > 2000 and car_makes[i] == "Toyota":
+			total += 1
+	print total
+	return total
+
 find_specific_year_car_models()
 find_any_year_car_models()
+find_toyotas_since_2000()
