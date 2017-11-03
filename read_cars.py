@@ -33,4 +33,14 @@ def find_specific_year_car_models():
 	print car_models_2006
 	return car_models_2006
 
+def find_any_year_car_models():
+	any_year = 2005
+	car_models_years = []
+	for i in range(0, len(car_years)):
+		if float(car_years[i]) == any_year:
+			car_models_years.append(car_models[i])
+	print car_models_years
+	return car_models_years
+
 find_specific_year_car_models()
+find_any_year_car_models()
