@@ -50,6 +50,69 @@ def find_toyotas_since_2000():
 	print total
 	return total
 
-find_specific_year_car_models()
-find_any_year_car_models()
-find_toyotas_since_2000()
+#def find_most_popular_color():
+	#total = 0
+	#for i in range(0, len(car_colors)):
+	#	if car_colors[i] > total:
+	#		total += 1
+	#print total
+#	count_list = []
+
+#	for i in range(0, len(car_colors)):
+	#	i != 0
+#		count = 0
+#		each_color = car_colors[0]
+#		if each_color == car_colors[i]:
+			#count.car_colors[i] += 1
+			#count += 1
+#			count_list.append(each_color)
+#			print len(count_list)
+#	print count_list
+
+	#for i in range(0, len(car_colors)):
+	#	each_color = car_colors[i]
+	#	count = 0
+	#	if each_color in range(0, len(car_colors)):
+	#		count += 1
+	#	else:
+	#		count = 1
+	#print each_color
+
+
+
+def find_most_popular_color():
+	each_color = []
+	for i in range(0, len(car_colors)):
+		if car_colors[i] not in each_color:
+			each_color.append(car_colors[i])
+	print each_color
+	
+	total = 0
+	count = []
+	color_spot = 0
+	
+	for i in range(0, len(each_color)):
+	
+		for j in range(0, len(car_colors)):
+			if each_color[i] == car_colors[j]:
+				total += 1
+	
+		count.append(total)
+		color_spot += 1
+		total = 0
+	
+	print count
+
+	current_maximum = count[0]
+	for n in count:
+		if n > current_maximum:
+			current_maximum = n
+	print current_maximum
+
+	
+	
+
+#find_specific_year_car_models()
+#find_any_year_car_models()
+#find_toyotas_since_2000()
+find_most_popular_color()
