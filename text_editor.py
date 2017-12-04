@@ -40,26 +40,23 @@ def switch_words(first_word, second_word, sentence):
 
 def censor_text(sentence):
 	innapropriate_list = ["crappy", "dumb", "stupid"]
-	replacement_list = ["fuzzy", "smart", "cute"]
+	replacement_list = ["######", "@@@@", "******"]
 	new_sentence = ""
 	new_word = ""
-
 	for i in range(0, len(sentence)):
 			if sentence[i] == " ":
 				new_sentence += (new_word + " ")
 				new_word = ""
 			else:
 				new_word += sentence[i]
-	for i in range(0, len(innapropriate_list)):			
-		if new_word == innapropriate_list[i]:
-			new_word = ""
-			new_sentence += replacement_list[i]
+				for j in range(0, len(innapropriate_list)):
+					if new_word == innapropriate_list[j]:
+						new_word = ""
+						new_sentence += replacement_list[j]
 	return new_sentence
-	#create for loop for lists too
-	#compare words to words and letter to letter
 
 
 print replace_letter("a", "l", "banana")
 print switch_letters("e", "o", "textbook")
-print switch_words("fox", "dog", "The quick brown fox jumps over the lazy dog")
-print censor_text("The dumb brown fox jumps over the stupid, crappy, lazy dog")
+print switch_words("fox", "dog", "The quick brown fox jumps over the lazy dog") 
+print censor_text("The dumb brown fox jumps over the stupid, crappy, lazy dog. Isn't that so dumb?")
