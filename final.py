@@ -34,29 +34,87 @@ def split_genders():
 genders = split_genders()
 
 
+'''
+if sentence[i] == " ":
+			new_sentence += (new_word + " ")
+			new_word = ""
+		else:
+			new_word += sentence[i]
+			if new_word == first_word:
+				new_word = ""
+				new_sentence += second_word
+			elif new_word == second_word:
+				new_word = ""
+				new_sentence += first_word
+'''
+
 #alphabetitize
 def alphabetitize():
 	alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-	i = 0
-	j = 0
+# dont need	i = 0
+# dont need	j = 0
 	x = 0
-
+	letter_a = []
+	letter_b = []
+	letter_c = []
+	letter_d = []
+	letter_e = []
+	letter_f = []
+	letter_g = []
+	letter_h = []
+	letter_i = []
+	letter_j = []
+	letter_k = []
+	letter_l = []
+	letter_m = []
+	letter_n = []
+	letter_o = []
+	letter_p = []
+	letter_q = []
+	letter_r = []
+	letter_s = []
+	letter_t = []
+	letter_u = []
+	letter_v = []
+	letter_w = []
+	letter_x = []
+	letter_y = []
+	letter_z = []
 	for i in range(0, len(last_names)):
-		each_last_name = last_names[i]
-		new_last_name = ""
-
+		each_last_name = last_names[i] #works
+		new_last_name = "" #works
+			
+		#print each_last_name #works
+		
 		for j in range(0, len(each_last_name)):
+			
+			if each_last_name[j] == "'": #might not need
+				new_last_name += each_last_name[j] + "'" #might not need
+				new_last_name = ""
+			else:
+				new_last_name += each_last_name[j]
+				
+				for x in range(0, len(alphabet)):
+					if each_last_name[j] == alphabet[x]:
+						letter_a.append(last_names[i])
+					else:
+						x +=1
 
-			for x in range(0, len(alphabet)):
 
-				if each_last_name[j] == alphabet[0]:
-					new_last_name += each_last_name[j]
-					j += 1
-					print new_last_name
+				if new_last_name == each_last_name:
+					new_last_name = ""
+		return new_last_name
+			#for x in range(0, len(alphabet)):
 
-				else:
-					x += 1
-					i += 1
+			#	if each_last_name[j] == alphabet[x]:
+			#		new_last_name += each_last_name[j]
+			#		j += 1
+			#		print new_last_name
+
+			#	else:
+			#		j += 1
+#					x += 1
+#					i += 1
 					#if i > len(each_last_name):
 					#	i -=1
 
@@ -73,6 +131,11 @@ def alphabetitize():
 			
 			else:
 				j += 1'''
+
+
+
+
+
 
 
 
