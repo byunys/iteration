@@ -49,11 +49,11 @@ if sentence[i] == " ":
 '''
 
 #alphabetitize
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
 def alphabetitize():
-	alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-# dont need	i = 0
 # dont need	j = 0
-	x = 0
 	letter_a = []
 	letter_b = []
 	letter_c = []
@@ -81,29 +81,50 @@ def alphabetitize():
 	letter_y = []
 	letter_z = []
 	for i in range(0, len(last_names)):
-		each_last_name = last_names[i] #works
-		new_last_name = "" #works
+		#for y in range(0, len(alphabet)):
+			each_last_name = last_names[i] #works
+			#each_letter = alphabet[y]
+			#new_last_name = "" #works
+		print each_letter
 			
-		#print each_last_name #works
-		
+		print each_last_name #works
+		#print "hi"
+
 		for j in range(0, len(each_last_name)):
-			
-			if each_last_name[j] == "'": #might not need
-				new_last_name += each_last_name[j] + "'" #might not need
-				new_last_name = ""
-			else:
-				new_last_name += each_last_name[j]
+			#for x in range(0, len(each_letter)):
+			#	x = 1
+			#	j = 0
+			if each_last_name[j] == alphabet[j]: #else:
+				print each_last_name     #only prints "A" last name
+				#print "hi"    #doesn't work
+				j += 1
 				
-				for x in range(0, len(alphabet)):
-					if each_last_name[j] == alphabet[x]:
-						letter_a.append(last_names[i])
-					else:
-						x +=1
+				#print "hi"     for loop works but not the if and else statement
+
+					
+	#			if each_last_name[0] == "a": #alphabet[x]
+
+	#				letter_a.append(last_names[i])
+	#				print letter_a
+			else:
+				j += 1
+				if j == len(each_last_name):
+					j = 0
+
+		
+#Lines 93-96
+			#if each_last_name[j] == "'": #might not need
+			#	new_last_name += each_last_name[j] + "'" #might not need
+			#	new_last_name = ""
+
+#Under if statement				
+				#new_last_name += each_last_name[j]
 
 
-				if new_last_name == each_last_name:
-					new_last_name = ""
-		return new_last_name
+		#return new_last_name    have to return the lists..... not new_last_names
+
+
+
 			#for x in range(0, len(alphabet)):
 
 			#	if each_last_name[j] == alphabet[x]:
